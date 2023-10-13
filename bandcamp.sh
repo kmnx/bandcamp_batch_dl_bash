@@ -1,7 +1,23 @@
 #!/bin/zsh
 
-/usr/local/Cellar/openjdk/20.0.2/bin/java -jar /Volumes/T7/bandcamp-collection-downloader.jar -c=/Volumes/T7/cookies.json -f=flac -d=/Volumes/T7/music_lossless_bandcamp knmx
+# requires xld, if missing, install with:
+# brew install xld
 
+# requires bandcamp-collection-downloader.jar 
+# from https://framagit.org/Ezwen/bandcamp-collection-downloader/-/releases
+
+# requires bandcamp cookies.json in same directory as script
+# see https://github.com/Ezwen/bandcamp-collection-downloader
+
+
+# set working directory to script location
+cd "$(dirname "$0")"
+
+# dl new files in flac format to /Volumes/T7/music_lossless_bandcamp
+java -jar bandcamp-collection-downloader.jar -c=cookies.json -f=flac -d=/Volumes/T7/music_lossless_bandcamp knmx
+
+
+# find every flac in /Volumes/T7 and convert to aiff
 IFS=$'\n'
 paths=($(find /Volumes/T7 -name "*.flac"))
 unset IFS

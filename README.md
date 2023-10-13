@@ -1,6 +1,10 @@
 # bash script to download my own bandcamp collection
 
-uses https://github.com/Ezwen/bandcamp-collection-downloader 
-to download all or most recent releases to collection
-and convert them from FLAC to AIFF using the command line version of
-XLD https://tmkk.undo.jp/xld/index_e.html
+requires bandcamp-collection-downloader.jar 
+from https://framagit.org/Ezwen/bandcamp-collection-downloader/-/releases
+
+requires bandcamp cookies.json in same directory as script
+see https://github.com/Ezwen/bandcamp-collection-downloader
+
+file converter requires xld, if missing, install with:
+brew install xld
