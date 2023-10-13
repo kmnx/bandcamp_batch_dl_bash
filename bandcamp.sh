@@ -28,6 +28,9 @@ do
 	echo "$i"
 	opath="${i%/*}/"
 	xld -o "$opath" -f aif $i
+	if [ $? -ne 0 ]; then
+  		exit 1
+	fi
 	rm $i
 done
 

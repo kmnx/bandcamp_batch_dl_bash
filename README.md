@@ -9,3 +9,6 @@ see https://github.com/Ezwen/bandcamp-collection-downloader
 requires xld audio converter, if missing, install with:
 
 brew install xld
+
+
+WILL DELETE YOUR FLACS AFTER CONVERTING THEM!!!
