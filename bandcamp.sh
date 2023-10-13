@@ -1,6 +1,7 @@
 #!/bin/zsh
 
-/usr/local/Cellar/openjdk/19.0.2/bin/java -jar /Volumes/T7/bandcamp-collection-downloader.jar -c=/Volumes/T7/cookies.json -f=flac -d=/Volumes/T7/music_lossless_bandcamp knmx
+/usr/local/Cellar/openjdk/20.0.2/bin/java -jar /Volumes/T7/bandcamp-collection-downloader.jar -c=/Volumes/T7/cookies.json -f=flac -d=/Volumes/T7/music_lossless_bandcamp knmx
+
 IFS=$'\n'
 paths=($(find /Volumes/T7 -name "*.flac"))
 unset IFS
@@ -14,3 +15,6 @@ do
 	rm $i
 done
 
+
+
+read  -n 1 -p "press key"
